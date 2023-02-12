@@ -10,11 +10,13 @@ width='300' />
 
  <h2> 
  
- :point_right: - _Python Essentials 1_  </h2>
+ :point_right:  _Python Essentials 1_  </h2>
 
 <h3>
 
 _Description:_ Certificate of having finished succesfully </h3>
 
 ![p1](imag/certificate.png) 
+
+ :point_right:  __  </h2>
 
