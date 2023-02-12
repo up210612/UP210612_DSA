@@ -20,11 +20,16 @@ _Description:_ Certificate of having finished succesfully </h3>
 
  :point_right:  _Bisection_  </h2>
 
+
 _Output:_
+
+
 ![p1](imag/bisec.png) 
 
 
  :point_right:  _Tickets_  </h2>
 
 _Output:_
+
+
 ![p1](imag/tick.png) 
