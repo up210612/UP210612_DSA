@@ -45,3 +45,17 @@ _Output:_
 
 
 ![p1](imag/bub.png) 
+
+ :point_right:  _Palíndromo_  
+
+_Output:_
+
+
+![p1](imag/pal.png) 
+
+ :point_right:  _Matríz aleatoria_  
+
+:warning:  _NOTE: Having made the program and tried several ways, I could not use the Numpy library. For some time I have had problems with my operating system (ubuntu) so it may be related to this and not being able to install the necessary packaging to use it. I have tried to use another programming environment to see better results, but I am still learning how to use it, the one I am using is Jupyter._ 
+
+
+![p1](imag/num.png) 
