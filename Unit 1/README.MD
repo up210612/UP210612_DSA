@@ -20,7 +20,7 @@ _Description:_ Certificate of having finished succesfully </h3>
 
  <h2> 
  
- :space_invader: - _Exercises_  </h2>
+ :space_invader: _Exercises_ :space_invader:</h2>
 
 
  :point_right:  _Bisection_  
@@ -38,3 +38,10 @@ _Output:_
 
 
 ![p1](imag/tick.png) 
+
+ :point_right:  _Bubble_  
+
+_Output:_
+
+
+![p1](imag/bub.png) 
