@@ -20,7 +20,7 @@ def quicksort (a,primero,ultimo):
     if(i<ultimo):
         quicksort(a,i,ultimo)
 
-a=[2,5,12,3,9,25,1]
+a=[25,5,12,3,9,2,1]
 r=quicksort(a,0,len(a)-1)
 print(a)
 

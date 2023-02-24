@@ -1,3 +1,3 @@
-from random import randrange
+import random
 
-print(randrange(10,20))
+print(random.randrange(10,20))
