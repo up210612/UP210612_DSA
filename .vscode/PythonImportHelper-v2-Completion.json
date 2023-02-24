@@ -1,0 +1,221 @@
+[
+    {
+        "label": "math",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "math",
+        "description": "math",
+        "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "array",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "array",
+        "description": "array",
+        "detail": "array",
+        "documentation": {}
+    },
+    {
+        "label": "mypkg.sibling",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "mypkg.sibling",
+        "description": "mypkg.sibling",
+        "detail": "mypkg.sibling",
+        "documentation": {}
+    },
+    {
+        "label": "randrange",
+        "importPath": "random",
+        "description": "random",
+        "isExtraImport": true,
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "raiz11",
+        "kind": 2,
+        "importPath": "Unit 1.01_bisec",
+        "description": "Unit 1.01_bisec",
+        "peekOfCode": "def raiz11(x):\n    return(x**2 - 11)\ndef biseccion(f, a, b, tol):\n    if f(a)*f(b) > 0:\n        print(\"No se encontró la raiz.\")\n    else:\n        iter = 0\n        while (b - a)/2.0 > tol:\n            mp = (a + b)/2.0\n            if f(a)*f(mp) < 0:",
+        "detail": "Unit 1.01_bisec",
+        "documentation": {}
+    },
+    {
+        "label": "biseccion",
+        "kind": 2,
+        "importPath": "Unit 1.01_bisec",
+        "description": "Unit 1.01_bisec",
+        "peekOfCode": "def biseccion(f, a, b, tol):\n    if f(a)*f(b) > 0:\n        print(\"No se encontró la raiz.\")\n    else:\n        iter = 0\n        while (b - a)/2.0 > tol:\n            mp = (a + b)/2.0\n            if f(a)*f(mp) < 0:\n                b = mp\n            else:",
+        "detail": "Unit 1.01_bisec",
+        "documentation": {}
+    },
+    {
+        "label": "palabra",
+        "kind": 5,
+        "importPath": "Unit 1.05_palindromo",
+        "description": "Unit 1.05_palindromo",
+        "peekOfCode": "palabra = input(\"Ingrese oración \")\npalabra = palabra.upper() \npalabraN = \"\"\nfor letra in palabra:                            \n    if letra not in (\" \"):    \n        palabraN += letra   \nif(palabraN==palabraN[::-1]):  \n      print(\"Es un palindromo\")  \nelse:  \n      print(\"No es un palindromo\")",
+        "detail": "Unit 1.05_palindromo",
+        "documentation": {}
+    },
+    {
+        "label": "palabra",
+        "kind": 5,
+        "importPath": "Unit 1.05_palindromo",
+        "description": "Unit 1.05_palindromo",
+        "peekOfCode": "palabra = palabra.upper() \npalabraN = \"\"\nfor letra in palabra:                            \n    if letra not in (\" \"):    \n        palabraN += letra   \nif(palabraN==palabraN[::-1]):  \n      print(\"Es un palindromo\")  \nelse:  \n      print(\"No es un palindromo\")",
+        "detail": "Unit 1.05_palindromo",
+        "documentation": {}
+    },
+    {
+        "label": "palabraN",
+        "kind": 5,
+        "importPath": "Unit 1.05_palindromo",
+        "description": "Unit 1.05_palindromo",
+        "peekOfCode": "palabraN = \"\"\nfor letra in palabra:                            \n    if letra not in (\" \"):    \n        palabraN += letra   \nif(palabraN==palabraN[::-1]):  \n      print(\"Es un palindromo\")  \nelse:  \n      print(\"No es un palindromo\")",
+        "detail": "Unit 1.05_palindromo",
+        "documentation": {}
+    },
+    {
+        "label": {
+            "name": "",
+            "kind": 2,
+            "peekOfCode": "def H (a,b):\n    c= ((a**2)+(b**2))**.5\n    return c\nprint (\"El valor de la hipotenusa es igual a\",H(3,4))"
+        },
+        "kind": 2,
+        "importPath": "Unit 1.ejercicio",
+        "description": "Unit 1.ejercicio",
+        "peekOfCode": "def H (a,b):\n    c= ((a**2)+(b**2))**.5\n    return c\nprint (\"El valor de la hipotenusa es igual a\",H(3,4))",
+        "detail": "Unit 1.ejercicio",
+        "documentation": {}
+    },
+    {
+        "label": "minutos",
+        "kind": 5,
+        "importPath": "Unit 1.ejercicio2",
+        "description": "Unit 1.ejercicio2",
+        "peekOfCode": "minutos = (minutos%60)\nprint(horas, \":\", minutos)  \nyear= int (input (\"enter year: \"))\nif year < 1582:\n    print (\"No within the gregorian calendar period\")\nelif (year%4):\n        print(\"common year\")\nelse: print (\"leap year\")\nnumber=1\nwhile number!=0:",
+        "detail": "Unit 1.ejercicio2",
+        "documentation": {}
+    },
+    {
+        "label": "board1",
+        "kind": 5,
+        "importPath": "Unit 1.sect6",
+        "description": "Unit 1.sect6",
+        "peekOfCode": "board1 = [[i+j for i in range(3)] for j in range(7)] #arreglo bidimensional\n#por default genera una lista\n#board2 = np.array(board1) - lo transforma a arreglo\n'''\nprint(\"days\")\nfor day in board1:\n    print(day)\nprint()\n'''\nlist_1 =[3,5,8,9,3]",
+        "detail": "Unit 1.sect6",
+        "documentation": {}
+    },
+    {
+        "label": "#board2",
+        "kind": 5,
+        "importPath": "Unit 1.sect6",
+        "description": "Unit 1.sect6",
+        "peekOfCode": "#board2 = np.array(board1) - lo transforma a arreglo\n'''\nprint(\"days\")\nfor day in board1:\n    print(day)\nprint()\n'''\nlist_1 =[3,5,8,9,3]\nlist_2=list_1\nprint(list_2)",
+        "detail": "Unit 1.sect6",
+        "documentation": {}
+    },
+    {
+        "label": "keywords",
+        "kind": 5,
+        "importPath": "Unit 1.section3",
+        "description": "Unit 1.section3",
+        "peekOfCode": "keywords = ['false', 'none', 'true', 'and', 'as', 'assert', 'continue', 'def',\n            'break', 'class']\nprint (len(keywords))\nprint (keywords[1], keywords.index('true'))\nprint (keywords.pop(), keywords.pop(), keywords.pop(1), keywords[1])\nkeywords.insert(2, 'hola')\nprint(keywords)\n#append, agregar al final; insert, agregar en la posición indicada\n#pop muestra y saca un elemento. Sirve para pilas, colas y listas. \n#x+=1",
+        "detail": "Unit 1.section3",
+        "documentation": {}
+    },
+    {
+        "label": "ordenar",
+        "kind": 2,
+        "importPath": "Unit 1.section5",
+        "description": "Unit 1.section5",
+        "peekOfCode": "def ordenar(stack):\n\treturn len(stack)== 0 \ndef double(x):\n    y=x*2\n    return y \na=[5, 6, 9, 8, 7]\nfor i in range(0, len(a)):\n\tprint(a[i])\n#bubble\nfor i in range (0, len(a)+1 -2):",
+        "detail": "Unit 1.section5",
+        "documentation": {}
+    },
+    {
+        "label": "double",
+        "kind": 2,
+        "importPath": "Unit 1.section5",
+        "description": "Unit 1.section5",
+        "peekOfCode": "def double(x):\n    y=x*2\n    return y \na=[5, 6, 9, 8, 7]\nfor i in range(0, len(a)):\n\tprint(a[i])\n#bubble\nfor i in range (0, len(a)+1 -2):\n    for j in range (0, len(a)+1 - i-2):\n        x= a[j]",
+        "detail": "Unit 1.section5",
+        "documentation": {}
+    },
+    {
+        "label": "rooms",
+        "kind": 5,
+        "importPath": "Unit 1.vacancy",
+        "description": "Unit 1.vacancy",
+        "peekOfCode": "rooms = [[[False for r in range(20)]for f in range(15)]for b in range(3)]\nprint(rooms)",
+        "detail": "Unit 1.vacancy",
+        "documentation": {}
+    },
+    {
+        "label": "binSearch",
+        "kind": 2,
+        "importPath": "Unit 2.binSearch",
+        "description": "Unit 2.binSearch",
+        "peekOfCode": "def binSearch(list,value):\n    prin=0\n    i=0\n    fin=int(len(list))\n    middle= int((prin+fin)//2)\n    while prin<=fin and list[middle]!=value:\n        if value< list[middle]:\n            fin=middle-1\n            i+=1\n        else:",
+        "detail": "Unit 2.binSearch",
+        "documentation": {}
+    },
+    {
+        "label": "#value",
+        "kind": 5,
+        "importPath": "Unit 2.binSearch",
+        "description": "Unit 2.binSearch",
+        "peekOfCode": "#value = 14\nvalue=int(input(\"Enter value: \"))\nback= binSearch(a,value)\nprint(back)",
+        "detail": "Unit 2.binSearch",
+        "documentation": {}
+    },
+    {
+        "label": "listNotsort",
+        "kind": 2,
+        "importPath": "Unit 2.busqLineal",
+        "description": "Unit 2.busqLineal",
+        "peekOfCode": "def listNotsort(L,x):\n    for i in range(len(L)):\n        if L[i]==x:\n            return i\n        else:\n            if i==len(L)-1:\n                return 'none'\ndef listSort(L,x):\n    for i in range(len(L)):\n        if L[i]==x:",
+        "detail": "Unit 2.busqLineal",
+        "documentation": {}
+    },
+    {
+        "label": "listSort",
+        "kind": 2,
+        "importPath": "Unit 2.busqLineal",
+        "description": "Unit 2.busqLineal",
+        "peekOfCode": "def listSort(L,x):\n    for i in range(len(L)):\n        if L[i]==x:\n            return i\n        if L[i]>int(x):\n            return 'none'\nl1=[-5,2,8,6,1,9,14]\nl2=[-3,1,5,9,10,12,15]\nvalue=int(input(\"Ingrese valor a buscar en ambas listas: \"))\n#value=6",
+        "detail": "Unit 2.busqLineal",
+        "documentation": {}
+    },
+    {
+        "label": "priorida",
+        "kind": 2,
+        "importPath": "Unit 2.infix2posfix",
+        "description": "Unit 2.infix2posfix",
+        "peekOfCode": "def prioridad (c):\n    if c in ['+','-']:\n        return 1\n    elif c in ['*','/']:\n        return 2\n    elif c in ['^']:\n        return 3\n    elif c in ['(', ')']:\n        return 0\n#p=[5,6,2,'+','*',12,4,'/','-']",
+        "detail": "Unit 2.infix2posfix",
+        "documentation": {}
+    },
+    {
+        "label": "priorida",
+        "kind": 2,
+        "importPath": "Unit 2.postfix",
+        "description": "Unit 2.postfix",
+        "peekOfCode": "def prioridad (c):\n    if c in ['+','-']:\n        return 1\n    elif c in ['*','/']:\n        return 2\n    elif c in ['^']:\n        return 3\np=[5,6,2,'+','*',12,4,'/','-']\n#op=input ()\n#p=op.split()",
+        "detail": "Unit 2.postfix",
+        "documentation": {}
+    },
+    {
+        "label": "quicksor",
+        "kind": 2,
+        "importPath": "Unit 2.quickSOrt",
+        "description": "Unit 2.quickSOrt",
+        "peekOfCode": "def quicksort (a,primero,ultimo):\n    i=primero\n    j=ultimo\n    central =(primero+ultimo)//2\n    pivote=a[central]\n    while (i<=j):\n        while (a[i]<pivote):\n            i=i+1\n        while (a[j]>pivote):\n            j=j-1",
+        "detail": "Unit 2.quickSOrt",
+        "documentation": {}
+    }
+]
