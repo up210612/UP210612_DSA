@@ -25,3 +25,5 @@ class Stack: #las clases siempre comienzan con MAYUSC
         newNode.next= self.head
         self.head= newNode
         self.size+=1
+        
+        
