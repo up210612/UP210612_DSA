@@ -13,12 +13,12 @@ p=[5,6,2,'+','*',12,4,'/','-']
 #op=input ()
 #p=op.split()
 #print(p)
-p.append(')')
+p.append('.')
 
 stack=[]
 prior=[]
 i=0
-while p[i]!= ')':
+while p[i]!= '.':
     
     if p[i] in ['+','-','*','/','^']:
         #print('\n')

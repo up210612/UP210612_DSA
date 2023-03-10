@@ -32,41 +32,21 @@ class Stack: #las clases siempre comienzan con MAYUSC
         self.size+=1
     
     def pop (self):
-        dat= None
-        if not self.isEmpty():
-            dat= self.head.data
-            self.head=self.head.next
-            self.size-=1
-        return dat
-    
-    def peak (self):
-        dat=None
-        if not self.isEmpty():
-            dat = self.head.data
-        return dat
-    
-    def show(self):
-        cad = self.head.data
-        self.head= self.head.data
         
-        return cad   
-        #concatenar datos de los nodos y mostrarlos, SIN borrarlos
+        dat= self.head.data
+        self.head=self.head.next
+        self.size-=1
+        return dat
+        
         
     
 
 p1 = Stack()
-print(p1.peak())
 p1.push("jesus")
-p1.push("maria")
-p1.push("jose")
+p1.push("Maria") 
+p1.push("josé")
 
-print(p1.show())
 
-print(p1.peak())
 print(p1.pop())
-print(p1.pop())
-print(p1.pop())
-print(p1.pop())
-
 #los nodos generan objetos
 #propiedades: size, head       

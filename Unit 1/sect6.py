@@ -42,7 +42,7 @@ print(number[-2]) #empieza a contar del final al inicio
 number.pop()#muestra y elimina la ultima posición
 del number[-1]#solo elimina la ult posicion
 #number.append() agrega cosas a la cola
-number.insert(3,33)#posición 3, agregar el 3
+number.insert(3,33)#posición 3, agregar el 33
 
 for i in range(0, len(number)):
     print (number[i])

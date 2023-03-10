@@ -1,3 +1,4 @@
 import random
 
-print(random.randrange(10,20))
+for x in range (10):
+    print(random.randint(1,101))
