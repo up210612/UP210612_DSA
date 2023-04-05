@@ -8,46 +8,11 @@ def prioridad(c):
         return 2
     elif c in ['^']:
         return 3
-    elif c in ['sen', 'cos', 'tan', 'asen', 'acos', 'atan', 'ln', 'log']:
+    elif c in ['sin', 'cos', 'tan', 'asin', 'acos', 'atan', 'ln', 'log']:
         return 4
     elif c in ['(', ')']:
         return 0
 
-
-def in2Pos(Q):
-    P = []
-    stack = []
-    Q.insert(0, "(")
-    Q.insert(-1, ")")
-    Q.append(".")  # Para recorrer Q
-    i = 0
-    while Q[i] != '.':
-        if Q[i] == "(":
-            stack.append(Q[i])
-        elif Q[i] in ['+', '-', '*', '/', '^']:
-            # revisar prioridades
-            a = int(prioridad(Q[i]))
-            b = prioridad(stack[-1])
-            # print(a,b)
-            if a <= b:
-                P.append(stack[-1])
-                stack.pop()
-            stack.append(Q[i])
-        elif Q[i] in ['sen', 'cos', 'tan', 'asen', 'acos', 'atan', 'ln', 'log']:
-            
-            a = Q[i], Q[i+1], Q[i+2], Q[i+3]
-            P.append(a) 
-
-        elif Q[i] == ")":
-            while stack[-1] != "(":
-                P.append(stack[-1])
-                stack.pop()
-            stack.pop()
-        else:
-            P.append(Q[i])
-
-        i += 1
-    return P
 
 
 def posfix(p):
@@ -56,47 +21,9 @@ def posfix(p):
     stack = []
     prior = []
     operator = ['+', '-', '*', '/', '^']
-    funcion = ['sen', 'cos', 'tan', 'asen', 'acos', 'atan', 'ln', 'log']
+    
     i = 0
     while p[i] != '.':
-
-        if p[i] in funcion:
-            a = p[i+1], p[i+2], p[i+3]
-            # a=a.split()
-            if '(' in a and ')' in a:
-                a = list(a)
-                a.remove('(')
-                a.remove(')')
-                x = int(a[0])
-                b= math.radians(x)
-                if p[i] == 'sen':
-                    c = math.sin(b)
-                elif p[i] == 'cos':
-                    c = math.cos(b)
-
-                elif p[i] == 'tan':
-                    c = math.tan(b)
-
-                elif p[i] == 'asen':
-                    c = math.asin(b)
-                    
-                elif p[i] == 'acos':
-                    c = math.acos(b)
-                    
-                elif p[i] == 'atan':
-                    c = math.atan(b)
-                
-                elif p[i] == 'ln':
-                    c = math.log(x)
-                    
-                elif p[i] == 'log':
-                    c = math.log10(x)
-
-                stack.append(c)
-                j = 0
-                for j in range(4):
-                    p.remove(p[i])
-                continue
 
         if p[i] in operator:
             # print('\n')
@@ -129,14 +56,97 @@ def posfix(p):
     value = stack.pop()
     return value
 
-Q = ('1 / ( 100 + 1 / ( 100 + 1 / ( 100 + 1 / 100 ) ) )')
+
+def in2Pos(Q):
+    P = []
+    stack = []
+    Q.insert(0, "(")
+    long=len(Q)
+    Q.insert(long, ")")
+    Q.append('.')  # Para recorrer Q
+    i = 0
+    while Q[i] != '.':
+        if Q[i] == "(":
+            stack.append(Q[i])
+        elif Q[i] in ['+', '-', '*', '/', '^']:
+            # revisar prioridades
+            a = int(prioridad(Q[i]))
+            b = prioridad(stack[-1])
+    
+            if a <= b:
+                P.append(stack[-1])
+                stack.pop()
+            stack.append(Q[i])
+        elif Q[i] in ['sin', 'cos', 'tan', 'asin', 'acos', 'atan', 'ln', 'log']:
+            j=1
+            subQ=[]
+            while Q[i+j] != ')':
+                a= Q[i+j]
+                subQ.append(a)
+                j+=1
+            subQ.append(')')
+            if '(' in subQ and ')' in subQ:
+                
+                subQ.remove('(')
+                subQ.remove(')')
+                if len(subQ)> 1 :
+                    subQ= in2Pos(subQ)
+                    c=posfix(subQ)
+                    
+                else: 
+                    c= int( subQ[0])
+                
+                b= math.radians(c)
+                if Q[i] == 'sin':
+                    c = math.sin(b)
+                elif Q[i] == 'cos':
+                    c = math.cos(b)
+
+                elif Q[i] == 'tan':
+                    c = math.tan(b)
+
+                elif Q[i] == 'asin':
+                    c = c= math.degrees(math.asin(c))
+                    
+                elif Q[i] == 'acos':
+                    c = math.acos(b)
+                    
+                elif Q[i] == 'atan':
+                    c = math.atan(b)
+                
+                elif Q[i] == 'ln':
+                    c = math.log(c)
+                    
+                elif Q[i] == 'log':
+                    c = math.log10(c)
+
+                #stack.append(c)
+                #for j in range(len(subQ)+3):
+                while Q[i]!=')':   
+                    Q.pop(i)
+                Q.pop(i)
+                Q.insert(i,c)
+                continue
+        elif Q[i] == ")":
+            while stack[-1] != "(":
+                P.append(stack[-1])
+                stack.pop()
+            stack.pop()
+        else:
+            P.append(Q[i])
+
+        i += 1
+    return P
+
+
+
+Q = ('2 + asin ( 1.7071 - 1 ) + 3')
 Q=Q.split()
 
 Q = in2Pos(Q)
 Q = posfix(Q)
 
 print(Q)
-
 
 #Q=['(', '5', '*', '(', '6', '+', '2', ')', '-', '12', '/', '4', ')']
 #Q = ['6', '+', '2']

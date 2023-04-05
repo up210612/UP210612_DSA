@@ -46,27 +46,37 @@ class Stack: #las clases siempre comienzan con MAYUSC
         return dat
     
     def show(self):
-        cad = self.head.data
-        self.head= self.head.data
+        dat2 = self.head.data
+        reset=self.head
+        long = self.size
+        for i in range(long-1):
+            self.head= self.head.next
+            dat = self.head.data
+            dat2 = dat2 + ' ' + dat
+        self.head=reset
         
-        return cad   
+        return dat2  
         #concatenar datos de los nodos y mostrarlos, SIN borrarlos
+        
+    def exist (self, dato_busca):
+        dat = self.show()
+        dat = dat.split()
+        if dato_busca in dat: return True
+        else: return False
         
     
 
 p1 = Stack()
-print(p1.peak())
+
 p1.push("jesus")
 p1.push("maria")
 p1.push("jose")
+p1.push("Pau")
 
 print(p1.show())
+print(p1.exist('sara'))
 
-print(p1.peak())
-print(p1.pop())
-print(p1.pop())
-print(p1.pop())
-print(p1.pop())
+
 
 #los nodos generan objetos
 #propiedades: size, head       
